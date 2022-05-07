@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>GameMania</title>
+    <link rel="icon" href="./assets/imagem/Icones/icone2.png" sizes="any" type="image/svg+xml" />
+    <meta charset="utf-8">
+    <meta name="author" content="Milton Augusto - 1000ton" />
+    <meta name="description" content="Site GameMania - Curso Senai" />
+    <meta name="keywords" content="GameMania Site de jogos" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/css/carousel.css" rel="stylesheet">
+    <link href="./assets/css/jquery-ui.min.css" rel="stylesheet">
+
+    <!-- Meu CSS-->
+    <link href="./assets/css/index.css" rel="stylesheet">
+
+    <style>
+        label, input { display:block; }
+        input.text { margin-bottom: 0.2em; width:95%; padding: 0%; }
+        fieldset { padding:0; border:0; margin-top:25px; }
+        h1 { font-size: 1.2em; margin: .6em 0; }
+        .ui-dialog .ui-state-error { padding: .3em; }
+        .validateTips { border: 1px solid transparent; padding: 0em; }
+      </style>
+
+</head>
+
+<body  onload="renderizar()">
+
+<header>
+    <div id="barraTitulo"  class="container-md">
+        <div class="row">
+            <div class="col-md-4">
+                <img class="img-fluid" src="./assets/imagem/Icones/controle-de-video-game.png">
+            </div>
+            <div class="col-md-4 text-center">
+                <p id="tituloCab">GAMEMANIA</p>
+            </div>
+            <div class="col-md-4 text-end">
+                <a href="#" id="botaoUsuario"><img class="img-fluid" id="iconeUsuario" src="./assets/imagem/Icones/user_32x32.png"></a>
+                <img class="img-fluid" id="iconeCarrinho" src="./assets/imagem/Icones/carrinho_32x32.png">
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">DEPARTAMENTOS</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active" href="#">CONSOLES</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active" href="#">PC GAMERS</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active" href="#">JOGOS</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active" href="#">ACESSÓRIOS</a>
+                  </li>
+              </ul>
+              <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="" aria-label="Search">
+                  <button class="btn btn-outline-secondary" type="submit">Pesquisar</button>
+              </form>
+          </div>
+      </div>
+  </nav>
+
+</header>
+
+<main>
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container">
+            <div class="carousel-caption">
+              <a href="compraItem.html?idProduto=13"><img class="justify-content-center img-fluid rounded"
+                  src="./assets/imagem/banner/UK_FC6-Preorder-oldFC-adhoc.png"></a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="carousel-caption">
+              <a href="compraItem.html?idProduto=4"><img class="imagemBanner img-fluid rounded"
+                  src="assets/imagem/banner/fifa22.png"></a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="carousel-caption">
+              <a href="compraItem.html?idProduto=14"><img class="imagemBanner img-fluid rounded"
+                  src="assets/imagem/banner/Dying_Light_2_Stay_Human.png"></a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="carousel-caption">
+              <a href="compraItem.html?idProduto=15"><img class="imagemBanner img-fluid rounded"
+                  src="assets/imagem/banner/Deathloop_posters.png"></a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="carousel-caption">
+              <a href="compraItem.html?idProduto=16"><img class="imagemBanner img-fluid rounded"
+                  src="assets/imagem/banner/horizon_zero.png"></a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="carousel-caption">
+              <a href="compraItem.html?idProduto=2"><img class="imagemBanner img-fluid rounded"
+                  src="assets/imagem/banner/ps5.png"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    
+    <div class="container marketing">
+      <div class="d-flex align-items-center p-3 my-3 text-white tituloSecao">
+        <h1>NOVIDADES</h1>
+      </div>
+      <div class="row" id="quadroNovidades">
+      </div>
+    
+      <div class="d-flex align-items-center p-3 my-3 text-white tituloSecao">
+        <h1>PROMOÇÕES</h1>
+      </div>
+      <div class="row" id="quadroPromocoes1">
+      </div>
+      <div class="row" id="quadroPromocoes2">
+      </div>
+    </div>
+    <div id="dialog-message" title="E-mail cadastrado">
+        <p>
+          <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+          Seu e-mail foi cadastrado para receber nossas ofertas!
+        </p>
+    </div>
+
+    <div id="dialog-form" title="Criar novo usuário">
+        <p class="validateTips">Todos os campos requiridos</p>
+       
+        <form>
+          <fieldset>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" class="text ui-widget-content ui-corner-all">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="text ui-widget-content ui-corner-all">
+       
+            <!-- Allow form submission with keyboard without duplicating the dialog button -->
+            <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+          </fieldset>
+        </form>
+      </div>
+
+</main>
+
+<footer class="container">
+    <div class="d-flex align-items-center p-3 my-3 tituloSecao text-white">
+        <img src="assets/imagem/Icones/email_32x32.png">
+        <div class="col-md-5 lh-1 text-left ">
+            <h1 class="h2 mb-0 text-white lh-1">CADASTRE-SE PARA RECEBER</h1>
+            <h1 class="h5 mb-0 text-white lh-1">Ofertas recomendadas e preços exclusivos!</h1>
+        </div>
+        <div class="input-group">
+            <input id="campoEmail" class="form-control me-2" type="email" placeholder="" aria-label="email">
+            <button id="botaoInscrever" class="btn btn-outline-secondary" type="submit">INSCREVER-SE</button>
+        </div>
+    </div>
+
+    <div class="row" id="areaInfo">
+        <div class="col-lg-3">
+            <h1 class="topicoRodape">INSTITUCIONAL</h1>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="https://www.procon.df.gov.br/wp-content/uploads/2019/08/Codigo-do-consumidor-FINAL.pdf" target="_blank">Defesa do consumidor</a></li>
+                <li class="list-group-item"><a href="empresa.html">Empresa</a></li>
+                <li class="list-group-item"><a href="lojas.html">Nossas Lojas</a></li>
+              </ul>
+        </div>
+        <div class="col-lg-3">
+            <h1 class="topicoRodape">ATENDIMENTO</h1>
+            <ul class="list-group">
+            <li class="list-group-item" id="telefone">(86) 9 9999-9999</li>
+            <li class="list-group-item" id="email">milton@milton.com.br</li>
+            <li class="list-group-item" id="whatsapp">(86) 9 9999-9999</li>
+            </ul>
+        </div>
+        <div class="col-lg-3">
+            <h1 class="topicoRodape">REDES SOCIAIS</h1>
+            <ul class="list-group">
+                <li class="list-group-item" id="facebook">Facebook</li>
+                <li class="list-group-item" id="instagram">Instagram</li>
+                <li class="list-group-item" id="twitter">Twitter</li>
+            </ul>
+        </div>
+        <div class="col-lg-3">
+            <h1 class="topicoRodape">FORMA DE PAGAMENTO</h1>
+            <img src="./assets/imagem/Icones/cartao_visa.png">
+            <img src="./assets/imagem/Icones/cartao_mastercard.png">
+            <img src="./assets/imagem/Icones/mercadopago.png">
+            <img src="./assets/imagem/Icones/boleto.png">
+            <img src="./assets/imagem/Icones/americanexpress.png">
+            <img src="./assets/imagem/Icones/cartao_elo.png">
+            <img src="./assets/imagem/Icones/banco_brasil.png">
+            <img src="./assets/imagem/Icones/paypal.png">
+        </div>
+    </div>
+</footer>
+
+<script src="./assets/js/jquery-min.js"></script>
+<script src="./assets/js/jquery-ui.min.js"></script>
+
+    <script>
+        // Função para mostrar modal
+        $("#botaoInscrever").click(function() {
+            var campoEmail = $("#campoEmail").val()
+            if (campoEmail!="") { 
+                $( "#dialog-message" ).dialog({
+                    modal: true,
+                    buttons: {
+                    Ok: function() {
+                        $( this ).dialog( "close" );
+                        }
+                    }
+                });
+            }    
+        });
+
+        $(function() {
+            var dialog, form,
+            dialog = $( "#dialog-form" ).dialog({
+                autoOpen: false,
+                height: 400,
+                width: 350,
+                modal: true,
+                buttons: {
+        "Ok": function() {
+            dialog.dialog("close");
+        },
+        "Cancelar": function() {
+          dialog.dialog( "close" );
+        }
+      }
+
+    });
+ 
+    $( "#botaoUsuario" ).button().on( "click", function() {
+      dialog.dialog( "open" );
+    });
+  });
+    </script>
+
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+            let listaNovidades = [
+            {
+                nome: "ASSASSIN’S CREED VALHALLA",
+                preco: "R$ 999,99",
+                urlImagem: "./assets/imagem/produtos/assassins_creed.png",
+                urlLink: "compraItem.html?idProduto=1"
+            },
+            {
+                nome: "CONSOLE PLAYSTATION 5",
+                preco: "R$ 999,99",
+                urlImagem: "./assets/imagem/produtos/playstation_5.png",
+                urlLink: "compraItem.html?idProduto=2"
+            },
+            {
+                nome: "NBA 2k21",
+                preco: "R$ 999,99",
+                urlImagem: "./assets/imagem/produtos/nba2K2.png",
+                urlLink: "compraItem.html?idProduto=3"
+            },
+            {
+                nome: "FIFA 22",
+                preco: "R$ 999,99",
+                urlImagem: "./assets/imagem/produtos/fifa_22.png",
+                urlLink: "compraItem.html?idProduto=4"
+            }
+        ]
+
+        let listaPromocoes1 = [
+            {
+                nome: "FORZA HORIZON 5",
+                preco: "R$ 999,99",
+                urlImagem: "./assets/imagem/produtos/forza_horizon.png",
+                urlLink: "compraItem.html?idProduto=5" 
+            },
+            {
+                nome: "HOT WHEELS UNLEASHED",
+                preco: "R$ 999,99",
+                urlImagem: "./assets/imagem/produtos/hot_wheels.png",
+                urlLink: "compraItem.html?idProduto=6"
+            },
+            {
+                nome: "JOYSTICK XBOX ONE",
+                preco: "R$ 999,99",
+                urlImagem: "./assets/imagem/produtos/joystick_xbox_one.png",
+                urlLink: "compraItem.html?idProduto=7"
+            },
+            {
+                nome: "MOUSE GAMER CORSAIR",
+                preco: "R$ 999,99",
+                urlImagem: "./assets/imagem/produtos/mouse_gamer_corsair.png",
+                urlLink: "compraItem.html?idProduto=8"
+            }
+        ]
+        
+        let listaPromocoes2 = [
+            {
+                nome: "NOTEBOOK ALIENWARE",
+                preco: "R$ 999,99",
+                urlImagem: "./assets/imagem/produtos/notebook_alienware.png",
+                urlLink: "compraItem.html?idProduto=9"
+            },
+            {
+                nome: "RESIDENT EVIL 6",
+                preco: "R$ 999,99",
+                urlImagem: "./assets/imagem/produtos/resident_evil_6.png",
+                urlLink: "compraItem.html?idProduto=10"
+            },
+            {
+                nome: "GOD OF WAR",
+                preco: "R$ 999,99",
+                urlImagem: "./assets/imagem/produtos/god_of_war.png",
+                urlLink: "compraItem.html?idProduto=11"
+            },
+            {
+                nome: "THE DIVISION 2",
+                preco: "R$ 999,99",
+                urlImagem: "./assets/imagem/produtos/the_division_2.png",
+                urlLink: "compraItem.html?idProduto=12"
+            },
+        ]
+
+        function renderizar() {
+
+            let quadroNovidades = document.getElementById("quadroNovidades");
+
+            let modeloNovidades = "";
+
+            for (let index = 0; index < listaNovidades.length; index++) {
+                const novidades = listaNovidades[index];
+
+                modeloNovidades += `<div class="col-lg-3 quadroItem">
+                                        <div class="quadroItemDentro">
+                                            <a href="${novidades.urlLink}"><img class="imagemProduto img-fluid rounded mx-auto d-block"
+                                                    src="${novidades.urlImagem}"></a>
+                                            <p class="text-center">${novidades.nome}</p>
+                                            <p class="text-center preco">${novidades.preco}</p>
+                                        </div>
+                                    </div>`
+                                    
+            }
+            quadroNovidades.innerHTML = modeloNovidades;
+
+            let quadroPromocoes1 = document.getElementById("quadroPromocoes1");
+
+            let modeloPromocoes1 = "";
+
+            for (let index = 0; index < listaPromocoes1.length; index++) {
+                const promocoes1 = listaPromocoes1[index];
+
+                modeloPromocoes1 += `<div class="col-lg-3 quadroItem">
+                                        <div class="quadroItemDentro">
+                                            <a href="${promocoes1.urlLink}"><img class="imagemProduto img-fluid rounded mx-auto d-block"
+                                                    src="${promocoes1.urlImagem}"></a>
+                                            <p class="text-center">${promocoes1.nome}</p>
+                                            <p class="text-center preco">${promocoes1.preco}</p>
+                                        </div>
+                                    </div>`
+            }
+            quadroPromocoes1.innerHTML = modeloPromocoes1;
+
+            let quadroPromocoes2 = document.getElementById("quadroPromocoes2");
+
+            let modeloPromocoes2 = "";
+
+            for (let index = 0; index < listaPromocoes2.length; index++) {
+                const promocoes2 = listaPromocoes2[index];
+
+                modeloPromocoes2 += `<div class="col-lg-3 quadroItem">
+                                        <div class="quadroItemDentro">
+                                            <a href="${promocoes2.urlLink}"><img class="imagemProduto img-fluid rounded mx-auto d-block"
+                                                    src="${promocoes2.urlImagem}"></a>
+                                            <p class="text-center">${promocoes2.nome}</p>
+                                            <p class="text-center preco">${promocoes2.preco}</p>
+                                        </div>
+                                    </div>`
+            }
+            quadroPromocoes2.innerHTML = modeloPromocoes2;
+        }
+    </script>
+</body>
+</html>

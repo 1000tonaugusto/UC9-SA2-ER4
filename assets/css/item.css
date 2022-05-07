@@ -1,0 +1,24 @@
+body {
+    height: auto;
+}
+.imagemProduto {
+    margin-top: 5%;
+}
+
+#quadroDescricao {
+    background-color: #CFCFCF;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 1%;
+    mix-blend-mode: initial;
+    border: 0px #000000;
+}
+
+#quadroDescricao h1,
+#quadroDescricao h2,
+#quadroDescricao h3,
+#quadroDescricao p,
+#quadroDescricao label {
+    font-family: fontEmail;
+    color:#1b1b1b;
+}
